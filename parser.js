@@ -4,7 +4,7 @@ const {TimeoutError} = require("puppeteer");
 
 async function parse() {
     let ids = []
-    fs.readFile('7.txt', function(err, data) {
+    fs.readFile('6.txt', function(err, data) {
         if(err) throw err;
         ids = data.toString().split("\r\n");
     });
@@ -64,7 +64,7 @@ async function parse() {
 parse().then((value) => {
     let jsonString = JSON.stringify(value)
 
-    fs.writeFile("seventh250.json", jsonString, function(err, result) {
+    fs.writeFile("sixth250.json", jsonString, function(err, result) {
         if(err) console.log('error', err);
     });
 })
